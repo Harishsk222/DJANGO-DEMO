@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<br>
+        <div>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Bline1</th>
+                    <th scope="col">Bline2</th>
+                    <th scope="col">Bline3</th>
+                    <th scope="col">Bline4</th>
+                    <th scope="col">Bline5</th>
+                  </tr>
+                </thead>
+                <tbody>
+                      {% for i in data %}
+                        <tr>  
+                        <td>{{i.Date}}</td>
+                        <td>{{i.Bl1}}</td>
+                        <td>{{i.Bl2}}</td>
+                        <td>{{i.Bl3}}</td>
+                        <td>{{i.Bl4}}</td>
+                        <td>{{i.Bl5}}</dt>
+                        </tr>
+                         {% endfor %} 
+
+                    </tbody>
+                </table>
+         </div>
+    
+         {% endblock %}

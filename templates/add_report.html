@@ -1,0 +1,39 @@
+<html>
+    <body bgcolor='aqua'>
+            <h1>Register Page</h1>
+
+<div >
+<form  method="post">
+    {% csrf_token %}
+
+    <label for="Date">Date</label><br>
+    <input type="date" id="date" name="date"><br>
+    <hr>
+    <label for="first_name">{{user.username}} Line 1</label><br>
+    <input type="text" id="bl1" name="bl1"><br>
+    <hr>
+    <label for="first_name">{{user.username}} Line 2</label><br>
+    <input type="text" id="bl2" name="bl2"><br>
+    <hr>
+    <label for="first_name">{{user.username}} Line 3</label><br>
+    <input type="text" id="bl3" name="bl3"><br>
+    <hr>
+    
+    {% if user.username == "Banglore" or user.username == "Mumbai" %}
+    <label for="first_name">{{user.username}} Line 4</label><br>
+    <input type="text" id="bl4" name="bl4"><br>
+    <hr>
+    {% endif %}
+ 
+   
+    {% if user.username == "Banglore" %}
+        <label for="first_name">{{user.username}} Line 5</label><br>
+        <input type="text" id="bl5" name="bl5"><br>
+    {% endif %}
+<br><br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+  </div>
+    </body>
+</html>   
